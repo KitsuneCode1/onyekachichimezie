@@ -40,7 +40,7 @@ Version: 1.0.0
   --body: #060606;
   --black: #000;
   --white: #fff;
-  --theme: #E63946;
+  --theme: #e63946;
   --header: #fff;
   --text: #C1C1C1;
   --border: #273536;
@@ -106,6 +106,9 @@ Version: 1.0.0
     padding: 18px 30px;
     font-size: 14px;
   }
+}
+.contact-box a{
+  text-align: center;
 }
 .theme-btn.border-btn {
   border: 1px solid var(--border);
@@ -1102,6 +1105,9 @@ span {
   position: absolute;
   left: 40%;
   bottom: 35%;
+}
+.no-capitalize {
+  text-transform: none;
 }
 @media (max-width: 1199px) {
   .contact-1 .random-shape {
@@ -2288,13 +2294,13 @@ span {
 .footer-bottom .footer-bottom-wrapper .footer-list {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 2rem;
 }
 @media (max-width: 767px) {
   .footer-bottom .footer-bottom-wrapper .footer-list {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 1.5rem;
   }
 }
 .footer-bottom .footer-bottom-wrapper .footer-list li a {
