@@ -554,6 +554,9 @@ span {
   align-items: center;
   justify-content: center;
 }
+.about-wrapper-3 .about-content .items .item .icon img {
+  width: 54px;
+}
 .about-wrapper-3 .about-content .about-btn {
   margin-top: 40px;
   display: flex;
