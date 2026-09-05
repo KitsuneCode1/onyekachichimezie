@@ -76,7 +76,7 @@
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index.html">
-                                <img src="assets/img/logo/Logo-black.svg" alt="logo-img">
+                                <h1>&nbsp;</h1>
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -85,10 +85,6 @@
                             </button>
                         </div>
                     </div>
-                    <p class="text d-none d-xl-block">
-                        Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a
-                        feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
-                    </p>
                     <div class="mobile-menu fix mb-3"></div>
                     <div class="offcanvas__contact">
                         <h4>Contact Info</h4>
@@ -111,11 +107,6 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="header-button mt-4 text-center">
-                            <a href="#contact" class="theme-btn">
-                                Consultation <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
                         <div class="social-icon d-flex align-items-center">
                             <a target="_blank" href="https://github.com/KitsuneCode1"><i class="fab fa-github"></i></a>
                             <a target="_blank" href="https://x.com/Kitsune1471049"><i class="fab fa-x-twitter"></i></a>
@@ -733,6 +724,18 @@
             btnText.textContent = 'Send Message';
             btn.style.pointerEvents = 'auto';
         });
+    });
+    </script>
+    <script>
+    $(document).on('click', '.offcanvas__wrapper a[href^="#"], #mobile-menu a[href^="#"]', function () {
+        // Reuse the theme's own close button so it works with whatever
+        // open/close logic main.js already wires up
+        $('.offcanvas__close button').trigger('click');
+
+        // Fallback in case the close button click isn't enough
+        $('.offcanvas__info').removeClass('info-open active show');
+        $('.offcanvas__overlay').removeClass('overlay-open active show');
+        $('body').removeClass('offcanvas-opened overflow-hidden');
     });
     </script>
 </body>
